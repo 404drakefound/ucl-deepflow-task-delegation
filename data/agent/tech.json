@@ -1,0 +1,62 @@
+{
+  "name": "Tech Agent",
+  "description": "An A2A agent providing technical support, code generation, and software development insights.",
+  "url": "http://localhost:5000/tech_agent",
+  "version": "0.1.0",
+  "tags": ["technology", "development", "coding", "IT", "software"],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "authenticationModes": [
+    "None"
+  ],
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text",
+    "application/json"
+  ],
+  "skills": [
+    {
+      "id": "code_generation",
+      "name": "Code Generation",
+      "description": "Generates code snippets or full functions based on a given programming language and problem description.",
+      "inputModes": [
+        "text",
+        "application/json"
+      ],
+      "outputModes": [
+        "text",
+        "application/json"
+      ],
+      "examples": [
+        {
+          "input": "Write a Python function to sort a list of dictionaries by a common key.",
+          "output": "```python\ndef sort_list_of_dicts(data, key):\n    return sorted(data, key=lambda x: x[key])\n```"
+        }
+      ]
+    },
+    {
+      "id": "troubleshoot_error",
+      "name": "Troubleshoot Error",
+      "description": "Receives an error message or problem description and provides potential solutions or debugging steps.",
+      "inputModes": [
+        "text",
+        "application/json"
+      ],
+      "outputModes": [
+        "text",
+        "application/json"
+      ],
+      "examples": [
+        {
+          "input": "My Docker container is showing 'port already in use'. How do I fix it?",
+          "output": "This usually means another process is using the port. Try `lsof -i :PORT_NUMBER` or change the container's mapped port."
+        }
+      ]
+    }
+  ]
+}

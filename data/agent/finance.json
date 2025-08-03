@@ -1,0 +1,62 @@
+{
+  "name": "Finance Agent",
+  "description": "An A2A agent specializing in financial analysis, investment recommendations, and economic forecasting.",
+  "url": "http://localhost:5000/finance_agent",
+  "version": "0.1.0",
+  "tags": ["finance", "investing", "economics", "analysis"],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "authenticationModes": [
+    "None"
+  ],
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text",
+    "application/json"
+  ],
+  "skills": [
+    {
+      "id": "stock_analysis",
+      "name": "Stock Analysis",
+      "description": "Receives a stock ticker symbol and provides a brief analysis, including performance metrics and news.",
+      "inputModes": [
+        "text",
+        "application/json"
+      ],
+      "outputModes": [
+        "text",
+        "application/json"
+      ],
+      "examples": [
+        {
+          "input": "Analyze TSLA stock performance over the last quarter.",
+          "output": "TSLA showed a 15% increase, driven by strong Q3 earnings and production ramp-up..."
+        }
+      ]
+    },
+    {
+      "id": "economic_forecast",
+      "name": "Economic Forecast",
+      "description": "Generates a short-term economic outlook based on specified parameters (e.g., region, industry).",
+      "inputModes": [
+        "text",
+        "application/json"
+      ],
+      "outputModes": [
+        "text",
+        "application/json"
+      ],
+      "examples": [
+        {
+          "input": "Provide a 6-month economic forecast for the UK tech sector.",
+          "output": "The UK tech sector is expected to see continued growth, though venture capital funding might stabilize..."
+        }
+      ]
+    }
+  ]
+}

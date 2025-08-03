@@ -1,0 +1,81 @@
+{
+  "name": "Operations Agent",
+  "description": "An A2A agent specializing in operational planning, resource optimization, process automation, and performance monitoring.",
+  "url": "http://localhost:5000/operations_agent",
+  "version": "0.1.0",
+  "tags": ["operations", "logistics", "efficiency", "automation", "optimization"],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "authenticationModes": [
+    "None"
+  ],
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text",
+    "application/json"
+  ],
+  "skills": [
+    {
+      "id": "resource_optimization",
+      "name": "Resource Optimization",
+      "description": "Analyzes operational data and provides recommendations for optimal allocation of resources (e.g., manpower, machinery, or time).",
+      "inputModes": [
+        "text",
+        "application/json"
+      ],
+      "outputModes": [
+        "text",
+        "application/json"
+      ],
+      "examples": [
+        {
+          "input": "Optimize staffing levels for a 24/7 warehouse operation with fluctuating demand.",
+          "output": "Recommend increasing night shift staff by 20% and reducing weekend staff by 10% to match order volume trends."
+        }
+      ]
+    },
+    {
+      "id": "process_improvement",
+      "name": "Process Improvement",
+      "description": "Evaluates current operational processes and suggests improvements to increase efficiency or reduce costs.",
+      "inputModes": [
+        "text",
+        "application/json"
+      ],
+      "outputModes": [
+        "text",
+        "application/json"
+      ],
+      "examples": [
+        {
+          "input": "Evaluate the order fulfillment process for inefficiencies.",
+          "output": "Identified bottleneck at packing stage; suggest adding a parallel station and using barcode scanners for faster verification."
+        }
+      ]
+    },
+    {
+      "id": "kpi_monitoring",
+      "name": "KPI Monitoring",
+      "description": "Monitors operational KPIs and flags anomalies or performance dips in real time.",
+      "inputModes": [
+        "text",
+        "application/json"
+      ],
+      "outputModes": [
+        "text",
+        "application/json"
+      ],
+      "examples": [
+        {
+          "input": "Track weekly fulfillment rate and flag if it drops below 95%.",
+          "output": "Alert: Fulfillment rate dropped to 92% in week 28 due to delayed supplier shipments."
+        }
+      ]
+    }
+  ]
+}

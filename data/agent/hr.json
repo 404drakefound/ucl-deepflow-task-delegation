@@ -1,0 +1,62 @@
+{
+  "name": "HR Agent",
+  "description": "An A2A agent assisting with recruitment, policy inquiries, and employee onboarding processes.",
+  "url": "http://localhost:5000/hr_agent",
+  "version": "0.1.0",
+  "tags": ["HR", "human resources", "recruitment", "employee"],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "authenticationModes": [
+    "None"
+  ],
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text",
+    "application/json"
+  ],
+  "skills": [
+    {
+      "id": "job_description_generator",
+      "name": "Job Description Generator",
+      "description": "Creates a draft job description based on role, department, and key responsibilities.",
+      "inputModes": [
+        "text",
+        "application/json"
+      ],
+      "outputModes": [
+        "text",
+        "application/json"
+      ],
+      "examples": [
+        {
+          "input": "Generate a job description for a Senior Backend Developer in the FinTech industry.",
+          "output": "We are seeking a highly skilled Senior Backend Developer to join our dynamic FinTech team..."
+        }
+      ]
+    },
+    {
+      "id": "policy_lookup",
+      "name": "Policy Lookup",
+      "description": "Answers questions about company HR policies, such as leave, benefits, or expense guidelines.",
+      "inputModes": [
+        "text",
+        "application/json"
+      ],
+      "outputModes": [
+        "text",
+        "application/json"
+      ],
+      "examples": [
+        {
+          "input": "What is the policy for requesting annual leave?",
+          "output": "Employees are entitled to X days of annual leave. Requests must be submitted via the HR portal at least Y weeks in advance..."
+        }
+      ]
+    }
+  ]
+}
